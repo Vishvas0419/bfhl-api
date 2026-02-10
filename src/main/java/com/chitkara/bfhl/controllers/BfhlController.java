@@ -123,12 +123,15 @@ public class BfhlController {
             return "Mumbai";
         }
 
-        if (geminiApiKey == null || geminiApiKey.isEmpty()) {
+        String apiKey = System.getenv("GEMINI_API_KEY");
+
+        if (apiKey == null || apiKey.isEmpty()) {
             return "Unknown";
         }
 
         return "Unknown";
     }
+
 
 
     
