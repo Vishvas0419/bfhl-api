@@ -1,4 +1,4 @@
-# BFHL Qualifier API – Bajaj Finserv
+# BFHL APIs – Bajaj Finserv Assessment
 
 This repository contains my solution for the BFHL API assessment.
 
