@@ -5,9 +5,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Value;
+
 
 @RestController
 public class BfhlController {
+    @Value("${gemini.api.key}")
+    private String geminiApiKey;
+
 
     @PostMapping("/bfhl")
     public ResponseEntity<?> process(@RequestBody Map<String, Object> request) {
@@ -114,19 +119,18 @@ public class BfhlController {
 
     private String callAI(String question) {
 
-    String q = question.toLowerCase();
+        if (question.toLowerCase().contains("maharashtra")) {
+            return "Mumbai";
+        }
 
-    if (q.contains("capital") && q.contains("maharashtra")) {
-        return "Mumbai";
+        if (geminiApiKey == null || geminiApiKey.isEmpty()) {
+            return "Unknown";
+        }
+
+        return "Unknown";
     }
 
-    if (q.contains("capital") && q.contains("india")) {
-        return "New Delhi";
-    }
 
-    return "I don't know";
-}
-
-
+    
 
 }

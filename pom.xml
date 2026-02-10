@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.chitkara</groupId>
-	<artifactId>bhfl</artifactId>
+	<artifactId>bfhl</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>bhfl</name>
+	<name>bfhl</name>
 	<description>Assessment Test for BAJAJ</description>
 	<url/>
 	<licenses>
