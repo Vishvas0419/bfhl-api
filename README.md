@@ -8,7 +8,6 @@ This repository contains my solution for the BFHL API assessment.
 https://bfhl-api-cl2f.onrender.com/health
 
 - **POST /bfhl**
-
 https://bfhl-api-cl2f.onrender.com/bfhl
 
 
